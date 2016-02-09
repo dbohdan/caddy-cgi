@@ -1,0 +1,7 @@
+localhost:8081
+log	access.log
+fastcgi /cgi-bin localhost:8999 {
+	ext	.pl
+	split	.pl
+	index	index.html
+}
