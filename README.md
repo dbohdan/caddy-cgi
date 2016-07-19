@@ -8,6 +8,16 @@ Run this example on x86-64 Linux with the command
 make browse run
 ```
 
+This will start the included copy of Caddy and `fastcgi-wrapper` and open the test URL in your default browser.
+
+On a different operating system or CPU architecture replace the file `caddy` with an appropriate one from <https://caddyserver.com/download>. Start Caddy and `fastcgi-wrapper` with
+
+```sh
+make run
+```
+
+and go to <http://localhost:8081/cgi-bin/test.pl>.
+
 Stop it with Ctrl-C.
 
 # Sources
