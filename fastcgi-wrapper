@@ -13,8 +13,6 @@ use POSIX qw(setsid);
 
 require 'syscall.ph';
 
-#&daemonize;
-
 #this keeps the program alive or something after exec'ing perl scripts
 END() { } BEGIN() { }
 *CORE::GLOBAL::exit = sub { die "fakeexit\nrc=".shift()."\n"; };
@@ -24,14 +22,6 @@ if ($@) {
 };
 
 &main;
-
-sub daemonize() {
-    chdir '/'                 or die "Can't chdir to /: $!";
-    defined(my $pid = fork)   or die "Can't fork: $!";
-    exit if $pid;
-    setsid                    or die "Can't start a new session: $!";
-    umask 0;
-}
 
 sub main {
     $socket = FCGI::OpenSocket( "127.0.0.1:8999", 10 ); #use IP sockets
