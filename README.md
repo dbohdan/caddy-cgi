@@ -44,5 +44,5 @@ To stop both Caddy and `fastcgi-wrapper` press Ctrl-C.
 
 # Sources
 
-* [`fastcgi-wrapper-daemon`](http://nginxlibrary.com/downloads/perl-fcgi/fastcgi-wrapper) (direct download link)
-* [`fastcgi-wrapper`](https://github.com/dermesser/fastcgi-wrappers)
+* [`fastcgi-wrapper-daemon`](http://nginxlibrary.com/downloads/perl-fcgi/fastcgi-wrapper) by Denis S. Filimonov (direct download link)
+* [`fastcgi-wrapper`](https://github.com/dermesser/fastcgi-wrappers) by Denis S. Filimonov and Lewin Bormann
