@@ -5,7 +5,7 @@ This is an example of how to configure Caddy for CGI.
 1\. Clone this repository.
 
 ```sh
-git clone https://github.com/dbohdan/caddy-cgi
+git clone --depth 1 https://github.com/dbohdan/caddy-cgi
 ```
 
 2\. Download a Caddy binary appropriate for your OS and CPU architecture from <https://caddyserver.com/download>. Put it in the repository directory as the file `caddy` and make it executable. To do this on x86-64 Linux run
