@@ -2,29 +2,45 @@ This is an example of how to configure Caddy for CGI.
 
 # How to run
 
-Run this example on x86-64 Linux with the command
+1\. Clone this repository.
+
+```sh
+git clone https://github.com/dbohdan/caddy-cgi
+```
+
+2\. Download a Caddy binary appropriate for your OS and CPU architecture from <https://caddyserver.com/download>. Put it in the repository directory as the file `caddy` and make it executable. To do this on x86-64 Linux run
+
+```sh
+cd caddy-cgi/
+wget -O caddy.tar.gz 'https://caddyserver.com/download/build?os=linux&arch=amd64&features='
+tar xf caddy.tar.gz caddy
+chmod +x caddy
+```
+
+3\. Install the required CPAN modules. In many cases, you can do it from the interactive CPAN shell.
+
+```sh
+cpan
+> o conf make_install_make_command 'sudo make'
+> o conf mbuild_install_build_command 'sudo ./Build'
+> install CGI CGI::Carp FCGI
+```
+
+4\. Start Caddy and `fastcgi-wrapper` with
+
+```sh
+make
+```
+
+and go to <http://localhost:8081/cgi-bin/test.pl>.
+
+On desktop Linux you can instead use the command
 
 ```sh
 make browse run
 ```
 
-This will start the included copy of Caddy and `fastcgi-wrapper` and open the test URL in your default browser.
-
-You may need to install the required CPAN modules with
-
-```sh
-sudo cpan install CGI CGI::Carp FCGI
-```
-
-On a different operating system or CPU architecture replace the file `caddy` with an appropriate one from <https://caddyserver.com/download>. Start Caddy and `fastcgi-wrapper` with
-
-```sh
-make run
-```
-
-and go to <http://localhost:8081/cgi-bin/test.pl>.
-
-Stop it with Ctrl-C.
+To stop both Caddy and `fastcgi-wrapper` press Ctrl-C.
 
 # Sources
 
