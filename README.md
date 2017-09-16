@@ -12,7 +12,7 @@ git clone --depth 1 https://github.com/dbohdan/caddy-cgi
 
 ```sh
 cd caddy-cgi/
-wget -O caddy.tar.gz 'https://caddyserver.com/download/build?os=linux&arch=amd64&features='
+wget -O caddy.tar.gz 'https://caddyserver.com/download/linux/amd64?license=personal'
 tar xf caddy.tar.gz caddy
 chmod +x caddy
 ```
