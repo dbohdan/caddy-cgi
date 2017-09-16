@@ -1,4 +1,4 @@
-This is an example of how to configure Caddy for CGI with a FastCGI-to-CGI wrapper. You may wish to use the [CGI plugin](https://github.com/jung-kurt/caddy-cgi) instead.
+This is an example of how to configure Caddy for CGI with a FastCGI wrapper for CGI scripts. You may wish to use the [CGI plugin](https://github.com/jung-kurt/caddy-cgi) instead.
 
 # How to run
 
