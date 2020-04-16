@@ -1,0 +1,19 @@
+http://localhost:8081 {
+    root * ./root/
+    file_server
+    log
+
+    handle_errors {
+      @404 {
+         expression {http.error.status_code} == '404'
+      }
+
+      respond @404 "File not found."
+    }
+
+    reverse_proxy /cgi-bin/* localhost:8999 {
+        transport fastcgi {
+            split .pl
+        }
+    }
+}

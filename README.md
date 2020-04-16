@@ -1,6 +1,9 @@
-This is an example of how to configure Caddy for CGI with a FastCGI wrapper for CGI scripts. You may wish to use the [CGI plugin](https://github.com/jung-kurt/caddy-cgi) instead.
+# caddy-cgi
 
-# How to run
+This is an example of how to configure Caddy 1/2 for CGI with a FastCGI wrapper for CGI scripts.  If you are running version 1 you also have the option to use a [CGI plugin](https://github.com/jung-kurt/caddy-cgi).
+
+
+## How to run it
 
 1\. Clone this repository.
 
@@ -8,16 +11,15 @@ This is an example of how to configure Caddy for CGI with a FastCGI wrapper for 
 git clone --depth 1 https://github.com/dbohdan/caddy-cgi
 ```
 
-2\. Download a Caddy binary appropriate for your OS and CPU architecture from <https://caddyserver.com/download>. Put it in the repository directory as the file `caddy` and make it executable. To do this on x86-64 Linux run
+2\. Download a Caddy binary appropriate for your OS and CPU architecture from <https://github.com/caddyserver/caddy/releases>.  Put it in the repository directory as the file `caddy` and make it executable.  To do this on Linux run
 
 ```sh
 cd caddy-cgi/
-wget -O caddy.tar.gz 'https://caddyserver.com/download/linux/amd64?license=personal'
+wget -O caddy.tar.gz <latest-Caddy-2-release>
 tar xf caddy.tar.gz caddy
-chmod +x caddy
 ```
 
-3\. Install the required CPAN modules. In many cases, you can do it from the interactive CPAN shell.
+3\. Install the required CPAN modules.  In many cases you can do this from the interactive CPAN shell.
 
 ```sh
 cpan
@@ -42,7 +44,8 @@ make browse run
 
 To stop both Caddy and `fastcgi-wrapper` press Ctrl-C.
 
-# Sources
+
+## Sources
 
 * [`fastcgi-wrapper-daemon`](http://nginxlibrary.com/downloads/perl-fcgi/fastcgi-wrapper) by Denis S. Filimonov (direct download link)
 * [`fastcgi-wrapper`](https://github.com/dermesser/fastcgi-wrappers) by Denis S. Filimonov and Lewin Bormann
