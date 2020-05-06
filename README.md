@@ -19,16 +19,18 @@ wget -O caddy.tar.gz <latest-Caddy-2-release>
 tar xf caddy.tar.gz caddy
 ```
 
-3\. Install the required CPAN modules.  In many cases you can do this from the interactive CPAN shell.
+3\. Install [fcgiwrap](https://github.com/gnosek/fcgiwrap).  It may be available in your operating system's software repositories.
 
-```sh
+4\. Install the required CPAN modules for `test.pl`.  In many cases you can do this from the interactive CPAN shell.
+
+```
 cpan
 > o conf make_install_make_command 'sudo make'
 > o conf mbuild_install_build_command 'sudo ./Build'
-> install CGI CGI::Carp FCGI
+> install CGI CGI::Carp
 ```
 
-4\. Start Caddy and `fastcgi-wrapper` with
+5\. Start Caddy and `fcgiwrap` with
 
 ```sh
 make
@@ -42,10 +44,4 @@ On desktop Linux you can instead use the command
 make browse run
 ```
 
-To stop both Caddy and `fastcgi-wrapper` press Ctrl-C.
-
-
-## Sources
-
-* [`fastcgi-wrapper-daemon`](http://nginxlibrary.com/downloads/perl-fcgi/fastcgi-wrapper) by Denis S. Filimonov (direct download link)
-* [`fastcgi-wrapper`](https://github.com/dermesser/fastcgi-wrappers) by Denis S. Filimonov and Lewin Bormann
+To stop both Caddy and `fcgiwrap` press Ctrl-C.
