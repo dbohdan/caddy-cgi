@@ -45,3 +45,8 @@ make browse run
 ```
 
 To stop both Caddy and `fcgiwrap` press Ctrl-C.
+
+
+## License
+
+MIT.
