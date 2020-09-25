@@ -1,6 +1,6 @@
 # caddy-cgi
 
-This is an example of how to configure Caddy 1/2 for CGI with a FastCGI wrapper for CGI scripts.  If you are running version 1 you also have the option to use a [CGI plugin](https://github.com/jung-kurt/caddy-cgi).
+This is an example of how to configure Caddy 1/2 for CGI with a FastCGI wrapper for CGI scripts.  You also have the option to use the [CGI plugin](https://github.com/jung-kurt/caddy-cgi) for Caddy 1 and [its fork](https://github.com/aksdb/caddy-cgi) for Caddy 2.
 
 
 ## How to run it
